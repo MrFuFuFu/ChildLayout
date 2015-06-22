@@ -25,6 +25,9 @@ public class MainActivity extends Activity {
     private ImageView rel_iv_right_top;
     private ImageView rel_iv_right_bottom;
 
+    private static final String LEFT_IMAGE = "https://raw.githubusercontent.com/MrFuFuFu/ChildLayout/master/Images/left.png";
+    private static final String RIGHT_IMAGE = "https://raw.githubusercontent.com/MrFuFuFu/ChildLayout/master/Images/right.png";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,9 +51,9 @@ public class MainActivity extends Activity {
         ImageView iv_right_top = (ImageView) findViewById(R.id.iv_right_top);
         ImageView iv_right_bottom = (ImageView) findViewById(R.id.iv_right_bottom);
 
-        Glide.with(this).load("http://i.qichuang.com/01150617bf5511af14734a2d84f7d3b89f46ea16.png").fitCenter().into(iv_left);
-        Glide.with(this).load("http://i.qichuang.com/011506172c48ed135c37487c969ab0b7b54c2112.png").fitCenter().into(iv_right_top);
-        Glide.with(this).load("http://i.qichuang.com/011506172c48ed135c37487c969ab0b7b54c2112.png").fitCenter().into(iv_right_bottom);
+        Glide.with(this).load(LEFT_IMAGE).fitCenter().into(iv_left);
+        Glide.with(this).load(RIGHT_IMAGE).fitCenter().into(iv_right_top);
+        Glide.with(this).load(RIGHT_IMAGE).fitCenter().into(iv_right_bottom);
 
     }
 
@@ -71,13 +74,13 @@ public class MainActivity extends Activity {
                 MainActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Glide.with(MainActivity.this).load("http://i.qichuang.com/011506172c48ed135c37487c969ab0b7b54c2112.png").fitCenter().into(grid_iv_right_bottom);
+                        Glide.with(MainActivity.this).load(RIGHT_IMAGE).fitCenter().into(grid_iv_right_bottom);
                         setLayoutTODO(gridlayout, grid_iv_right_bottom);
 
-                        Glide.with(MainActivity.this).load("http://i.qichuang.com/011506172c48ed135c37487c969ab0b7b54c2112.png").fitCenter().into(grid_iv_right_top);
+                        Glide.with(MainActivity.this).load(RIGHT_IMAGE).fitCenter().into(grid_iv_right_top);
                         setLayoutTODO(gridlayout, grid_iv_right_top);
 
-                        Glide.with(MainActivity.this).load("http://i.qichuang.com/01150617bf5511af14734a2d84f7d3b89f46ea16.png").fitCenter().into(grid_iv_left);
+                        Glide.with(MainActivity.this).load(LEFT_IMAGE).fitCenter().into(grid_iv_left);
                         setLayoutTODO(gridlayout, grid_iv_left);
                     }
                 });
@@ -94,9 +97,9 @@ public class MainActivity extends Activity {
         rel_iv_right_top = (ImageView) findViewById(R.id.rel_iv_right_top);
         rel_iv_right_bottom = (ImageView) findViewById(R.id.rel_iv_right_bottom);
 
-        Glide.with(this).load("http://i.qichuang.com/01150617bf5511af14734a2d84f7d3b89f46ea16.png").fitCenter().into(rel_iv_left);
-        Glide.with(this).load("http://i.qichuang.com/011506172c48ed135c37487c969ab0b7b54c2112.png").fitCenter().into(rel_iv_right_top);
-        Glide.with(this).load("http://i.qichuang.com/011506172c48ed135c37487c969ab0b7b54c2112.png").fitCenter().into(rel_iv_right_bottom);
+        Glide.with(this).load(LEFT_IMAGE).fitCenter().into(rel_iv_left);
+        Glide.with(this).load(RIGHT_IMAGE).fitCenter().into(rel_iv_right_top);
+        Glide.with(this).load(RIGHT_IMAGE).fitCenter().into(rel_iv_right_bottom);
     }
 
 
