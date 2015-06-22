@@ -4,18 +4,12 @@ ChildLayout
 
 ## 描述
 
- 为了解决当我们使用 LinearLayout 布局的使用使用 weight 属性再嵌套LinearLayout，再在 LinearLayout 中使用 weight 属性，会导致实际的 View 无法被成功绘制的解决方案，具体实际的内容可以看我的博客~~~
+为了解决当我们使用 LinearLayout 布局的时候使用了 weight 属性后，再嵌套LinearLayout，又一次在子 LinearLayout 中使用 weight 属性，会导致实际的 View 无法被成功绘制的解决方案，具体实际的内容可以看我的博客~~~
 
 
 ## describe
 
-This is a simple image loading demo, only one line of code can be loaded image;
-
-If you want to load a picture, use `ImageViewEx`;
-
-If you want to use a circular image, then use `RoundImageView`;
-
-If you want to use a rounded picture, then use `RoundImageView`, and calls setConer(x,y); method, set the fillet;
+In order to solve when we use when LinearLayout layout After using the weight attribute, then nested LinearLayout, again using the weight attribute in the child LinearLayout, and will lead to child View solution can not be drawn, in particular the actual content can read my blog 
 
 
 ## Preview
