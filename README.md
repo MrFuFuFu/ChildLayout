@@ -4,7 +4,7 @@ ChildLayout
 
 ## 描述
 
- 为了解决当我们使用 LinearLayout 布局的使用使用 weight 属性再嵌套LinearLayout，再在 LinearLayout 中使用 weight 属性，会导致实际的 View 无法被成功绘制的解决方案，
+ 为了解决当我们使用 LinearLayout 布局的使用使用 weight 属性再嵌套LinearLayout，再在 LinearLayout 中使用 weight 属性，会导致实际的 View 无法被成功绘制的解决方案，具体实际的内容可以看我的博客~~~
 
 
 ## describe
@@ -20,7 +20,8 @@ If you want to use a rounded picture, then use `RoundImageView`, and calls setCo
 
 ## Preview
 
-![preview1](https://github.com/MrFuFuFu/ImageViewEx/blob/master/Image/screen.png)
+![preview1](https://raw.githubusercontent.com/MrFuFuFu/ChildLayout/master/Images/device-2015-06-22-173405.png)
+![preview2](https://raw.githubusercontent.com/MrFuFuFu/ChildLayout/master/Images/device-2015-06-22-173340.png)
 
 ## More about me
 
