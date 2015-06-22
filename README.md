@@ -4,7 +4,9 @@ ChildLayout
 
 ## 描述
 
-为了解决当我们使用 LinearLayout 布局的时候使用了 weight 属性后，再嵌套LinearLayout，又一次在子 LinearLayout 中使用 weight 属性，会导致实际的 View 无法被成功绘制的解决方案，具体实际的内容可以看我的博客~~~
+为了解决当我们使用 LinearLayout 布局的时候使用了 weight 属性后，再嵌套LinearLayout，又一次在子 LinearLayout 中使用 weight 属性，会导致实际的 View 无法被成功绘制的解决方案，具体实际的内容可以看我的博客
+
+项目地址：[LinearLayout设置 weight 无法绘制的问题](http://mrfufufu.github.io/android/2015/06/22/ChildLayout.html)
 
 
 ## describe
