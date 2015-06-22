@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_light"
+            android:padding="20dp"
+            android:text=" 1. use LinearLayout to layout, it can't draw  iv_right_top and iv_right_bottom"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/test1" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/iv_right_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/test2" />
+
+                <ImageView
+                    android:id="@+id/iv_right_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/test2" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_light"
+            android:padding="20dp"
+            android:textColor="@android:color/white"
+            android:text="2. use gridLayout, this problem is the views do not stretch evently for each row. this causes a lot of extra space to the right of GridLayout. to solve this problem, we need to call MainActivity.java in setLayoutTODO method." />
+
+        <GridLayout
+            android:id="@+id/gridlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="2">
+
+            <ImageView
+                android:id="@+id/grid_iv_left"
+                android:layout_column="0"
+                android:layout_gravity="start"
+                android:layout_rowSpan="2"
+                android:scaleType="centerCrop"
+                android:src="@drawable/test1" />
+
+            <ImageView
+                android:id="@+id/grid_iv_right_top"
+                android:layout_column="1"
+                android:layout_gravity="end|top"
+                android:scaleType="centerCrop"
+                android:src="@drawable/test2" />
+
+            <ImageView
+                android:id="@+id/grid_iv_right_bottom"
+                android:layout_column="1"
+                android:layout_gravity="end|bottom"
+                android:layout_marginTop="0.5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/test2" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_light"
+            android:padding="20dp"
+            android:textColor="@android:color/white"
+            android:text="3. this approach is great, it is completely solved my problem, my boss is a genius, in other wards, I was awkward? hahaha" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linear_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffe0e0e0"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/rel_iv_left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/test1" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/interval"
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:id="@+id/linear_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/linear_left"
+                android:layout_alignTop="@id/linear_left"
+                android:layout_marginLeft="0.5dp"
+                android:layout_toRightOf="@id/interval"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/rel_iv_right_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/test2" />
+
+                <ImageView
+                    android:id="@+id/rel_iv_right_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/test2" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
